@@ -6,7 +6,7 @@ on:
 
 jobs:
   before:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     if: "! contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - run: echo ${{ github.event.head_commit.message }}
@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-latest
+          - ubuntu-16.04
           # - macOS-latest
           # - windows-latest
     env:
