@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-16.04
+          - ubuntu-latest
           # - macOS-latest
           # - windows-latest
     env:
@@ -27,7 +27,7 @@ jobs:
     - uses: actions/checkout@v1
     - run: |
         sudo apt-get update -yqq
-        sudo apt-get install -y gcc libncursesw5-dev
+        sudo apt-get install -y gcc libncursesw5-dev build-essential
     - name: Cache choosenim
       id: cache-choosenim
       uses: actions/cache@v1
