@@ -47,5 +47,5 @@ jobs:
         ls -lah /lib/x86_64-linux-gnu/libncurses*
         sudo ln -sf /lib/x86_64-linux-gnu/libncurses.so.5 /usr/lib/x86_64-linux-gnu/libncursesw.so
     - run: nimble refresh
-    - run: script -e -c nimble test --verbose -Y
+    - run: script -e -c bash -c "nimble test --verbose -Y"
     - run: nimble install --verbose -Y
